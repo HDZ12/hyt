@@ -1,0 +1,379 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'ShouXie';
+    src: url('Muyao.ttf');
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'ShouXie';
+}
+
+.ling-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    font-size: 0px;
+    overflow: hidden;
+}
+
+.ling-one,
+.ling-two,
+.ling-three,
+.ling-four {
+    position: absolute;
+    width: calc(50% - 2px);
+    height: calc(50% - 2px);
+    background-color: #f59b00;
+    border: 1px solid transparent;
+}
+
+.ling-one {
+    left: 0px;
+    top: 0px;
+    animation: slide-tl 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.ling-two {
+    right: 0px;
+    top: 0px;
+    animation: slide-tr 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.ling-three {
+    left: 0px;
+    bottom: 0px;
+    animation: slide-bl 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.ling-four {
+    right: 0px;
+    bottom: 0px;
+    animation: slide-br 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.tree {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 100px;
+    height: 70px;
+    background-image: url(21.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.flower {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url(flower.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: slide-bottom 8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+}
+
+.play {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-image: url('music.png');
+    background-size: contain;
+    cursor: pointer;
+    animation: slide-bottoms 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    z-index: 1;
+}
+
+.plays {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: calc(calc(100% - 100px) / 2);
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    background-image: url('21.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    animation: slide-bottomss 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.santaClaus,
+.santaClausGift {
+    position: absolute;
+    left: -200px;
+    bottom: 40px;
+    width: 150px;
+    height: 150px;
+    background-image: url('R.png');
+    background-size: contain;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.santaClaus {
+    animation: slide-right 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.santaClausGift {
+    -webkit-transform: translateX(1060px);
+        transform: translateX(1060px);
+}
+
+.santaClaus::after,
+.santaClausGift::after {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 40px 27px;
+    background-image: url('gift.png');
+    background-size: contain;
+    opacity: 0;
+}
+
+.santaClausGift::after {
+    width: 60px;
+    height: 60px;
+    margin: 60px 36px;
+    opacity: 1;
+}
+
+.message {
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    max-width: 66%;
+    margin: 100px auto;
+    padding: 10px;
+    font-size: 36px;
+    display: inline-block;
+    text-align: center;
+    background-color: #f6d98b;
+    border: 3px solid #fff;
+    border-radius: 6px;
+}
+
+.messages {
+    width: 60%;
+    height: 50%;
+    font-size: 60px;
+    line-height: 300px;
+    transition: all 2s;
+}
+
+.message::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 100px;
+    height: 100px;
+    background-image: url('lion.png');
+    background-size: contain;
+}
+
+.playTree {
+    position: absolute;
+    left: 680px;
+    top: 400px;
+    width: 100px;
+    height: 100px;
+    background-image: url('21.png');
+    background-size: contain;
+    z-index: 2;
+}
+
+.lion {
+    position: absolute;
+    left: 980px;
+    top: 400px;
+    width: 100px;
+    height: 100px;
+    background-image: url('lion.png');
+    background-size: contain;
+    opacity: 0;
+    z-index: 2;
+}
+
+.wobble-hor-bottom {
+	-webkit-animation: wobble-hor-bottom 0.8s both;
+	        animation: wobble-hor-bottom 0.8s both;
+}
+
+
+
+.messages::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 100px;
+    height: 100px;
+    background-image: url('lion.png');
+    background-size: contain;
+    opacity: 0;
+}
+
+#christmas {
+    display: none;
+}
+
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    30% {
+        -webkit-transform: translateX(650px);
+        transform: translateX(650px);
+    }
+    50%,70%,90% {
+        -webkit-transform: translateX(660px);
+        transform: translateX(660px);
+    }
+    40%,60%,80%,100% {
+        -webkit-transform: translateX(1060px);
+        transform: translateX(1060px);
+    }
+}
+
+@keyframes slide-bottoms {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(300px);
+        transform: translateY(300px);
+    }
+}
+
+@keyframes slide-bottomss {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(150px);
+        transform: translateY(150px);
+    }
+}
+
+
+/* 雪花 */
+
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+    }
+}
+
+/* 渐入渐出动画效果  star*/
+
+@keyframes slide-tr {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-600px) translateX(600px);
+        transform: translateY(-600px) translateX(600px);
+    }
+}
+
+@keyframes slide-tl {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-600px) translateX(-600px);
+        transform: translateY(-600px) translateX(-600px);
+    }
+}
+
+@keyframes slide-bl {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(600px) translateX(-600px);
+        transform: translateY(600px) translateX(-600px);
+    }
+}
+
+@keyframes slide-br {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(600px) translateX(600px);
+        transform: translateY(600px) translateX(600px);
+    }
+}
+
+/* 渐入渐出动画效果  end*/

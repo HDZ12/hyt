@@ -375,9 +375,6 @@ body {
         transform: translateY(600px) translateX(600px);
     }
 }
-/* 原有的通用样式 */
-
-/* 小屏幕样式 */
 @media (max-width: 800px) {
     * {
         box-sizing: border-box; /* 修正盒模型 */
@@ -396,33 +393,322 @@ body {
         height: 50px; /* 调整高度 */
     }
 
-    .ling-box {
-        font-size: 16px; /* 调整字体大小 */
+    .tree {
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+    width: 50px;
+    height: 35px;
+    background-image: url(21.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.flower {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url(flower.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: slide-bottom 8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+}
+
+.play {
+    position: absolute;
+     width: 50px;
+        height: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    background-image: url('music.png');
+    background-size: contain;
+    cursor: pointer;
+    animation: slide-bottoms 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    z-index: 1;
+}
+
+.plays {
+    position: absolute;
+     width: 150px;
+        height: 150px;
+        top: calc(calc(100% - 75px) / 2);
+        margin: auto;
+    width: 300px;
+    height: 300px;
+    background-image: url('21.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    animation: slide-bottomss 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.santaClaus,
+.santaClausGift {
+    position: absolute;
+    width: 75px;
+        height: 75px;
+        left: -100px;
+        bottom: 20px;
+    background-image: url('R.png');
+    background-size: contain;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.santaClaus {
+    animation: slide-right 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.santaClausGift {
+    -webkit-transform: translateX(1060px);
+        transform: translateX(1060px);
+}
+
+.santaClaus::after,
+.santaClausGift::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+        height: 40px;
+        margin: 20px 13.5px;
+    background-image: url('gift.png');
+    background-size: contain;
+    opacity: 0;
+}
+
+.santaClausGift::after {
+   width: 30px;
+        height: 30px;
+        margin: 30px 18px;
+    opacity: 1;
+}
+
+.message {
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    max-width: 80%;
+        margin: 50px auto;
+        font-size: 24px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    background-color: #f6d98b;
+    border: 3px solid #fff;
+    border-radius: 6px;
+}
+
+.messages {
+    width: 80%;
+        height: 40%;
+        font-size: 40px;
+        line-height: 200px;
+    transition: all 2s;
+}
+
+.message::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+      width: 50px;
+        height: 50px;
+        left: -10px;
+        top: -10px;
+    background-image: url('lion.png');
+    background-size: contain;
+}
+
+.playTree {
+    position: absolute;
+    width: 50px;
+        height: 50px;
+        left: 340px;
+        top: 200px;
+    background-image: url('21.png');
+    background-size: contain;
+    z-index: 2;
+}
+
+.lion {
+    position: absolute;
+      width: 50px;
+        height: 50px;
+        left: 490px;
+        top: 200px;
+    background-image: url('lion.png');
+    background-size: contain;
+    opacity: 0;
+    z-index: 2;
+}
+
+.wobble-hor-bottom {
+	-webkit-animation: wobble-hor-bottom 0.8s both;
+	        animation: wobble-hor-bottom 0.8s both;
+}
+
+
+
+.messages::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+     width: 50px;
+        height: 50px;
+        left: -10px;
+        top: -10px;
+        opacity: 0;
+    background-image: url('lion.png');
+    background-size: contain;
+    opacity: 0;
+}
+
+#christmas {
+    display: none;
+}
+
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 
-    .tree,
-    .flower,
-    .play,
-    .plays,
-    .santaClaus,
-    .santaClausGift,
-    .playTree,
-    .lion {
-        width: 80px; /* 调整宽度 */
-        height: 80px; /* 调整高度 */
+    30% {
+        -webkit-transform: translateX(650px);
+        transform: translateX(650px);
+    }
+    50%,70%,90% {
+        -webkit-transform: translateX(660px);
+        transform: translateX(660px);
+    }
+    40%,60%,80%,100% {
+        -webkit-transform: translateX(1060px);
+        transform: translateX(1060px);
+    }
+}
+
+@keyframes slide-bottoms {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 
-    .message {
-        max-width: 100%; /* 充满屏幕宽度 */
-        font-size: 24px; /* 调整字体大小 */
-        margin: 20px auto; /* 调整边距 */
+    100% {
+        -webkit-transform: translateY(300px);
+        transform: translateY(300px);
+    }
+}
+
+@keyframes slide-bottomss {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 
-    .messages {
-        width: 80%; /* 调整宽度 */
-        height: 30%; /* 调整高度 */
-        font-size: 40px; /* 调整字体大小 */
-        line-height: 150px; /* 调整行高 */
+    100% {
+        -webkit-transform: translateY(150px);
+        transform: translateY(150px);
     }
+}
+
+
+/* 雪花 */
+
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+    }
+}
+
+/* 渐入渐出动画效果  star*/
+
+@keyframes slide-tr {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-600px) translateX(600px);
+        transform: translateY(-600px) translateX(600px);
+    }
+}
+
+@keyframes slide-tl {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-600px) translateX(-600px);
+        transform: translateY(-600px) translateX(-600px);
+    }
+}
+
+@keyframes slide-bl {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(600px) translateX(-600px);
+        transform: translateY(600px) translateX(-600px);
+    }
+}
+
+@keyframes slide-br {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(600px) translateX(600px);
+        transform: translateY(600px) translateX(600px);
+    }
+}
 }
 

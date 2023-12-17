@@ -375,4 +375,54 @@ body {
         transform: translateY(600px) translateX(600px);
     }
 }
+/* 原有的通用样式 */
+
+/* 小屏幕样式 */
+@media (max-width: 800px) {
+    * {
+        box-sizing: border-box; /* 修正盒模型 */
+    }
+
+    html,
+    body {
+        font-size: 14px; /* 调整基础字体大小 */
+    }
+
+    .ling-one,
+    .ling-two,
+    .ling-three,
+    .ling-four {
+        width: calc(100% - 2px); /* 充满屏幕宽度 */
+        height: 50px; /* 调整高度 */
+    }
+
+    .ling-box {
+        font-size: 16px; /* 调整字体大小 */
+    }
+
+    .tree,
+    .flower,
+    .play,
+    .plays,
+    .santaClaus,
+    .santaClausGift,
+    .playTree,
+    .lion {
+        width: 80px; /* 调整宽度 */
+        height: 80px; /* 调整高度 */
+    }
+
+    .message {
+        max-width: 100%; /* 充满屏幕宽度 */
+        font-size: 24px; /* 调整字体大小 */
+        margin: 20px auto; /* 调整边距 */
+    }
+
+    .messages {
+        width: 80%; /* 调整宽度 */
+        height: 30%; /* 调整高度 */
+        font-size: 40px; /* 调整字体大小 */
+        line-height: 150px; /* 调整行高 */
+    }
+}
 

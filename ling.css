@@ -376,27 +376,3 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .ling-one,
-    .ling-two,
-    .ling-three,
-    .ling-four {
-        width: 100%;
-        height: 100%;
-    }
-
-    .tree,
-    .flower,
-    .play,
-    .plays,
-    .santaClaus,
-    .santaClausGift,
-    .message,
-    .playTree,
-    .lion {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* 添加其他媒体查询适应不同屏幕尺寸 */

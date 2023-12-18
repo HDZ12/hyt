@@ -297,8 +297,3 @@ window.addEventListener("load", function () {
     document.querySelector(".ling-box").append(playDiv);
   }, 3000);
 });
-
-
-// 结束的时候 将五月天的视频作为背景进行播放
-
-// 最初想播放五月天的温柔，好好是不是更好一点呢，思考ing [狗头]

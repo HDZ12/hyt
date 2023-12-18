@@ -154,30 +154,6 @@ body {
     opacity: 1;
 }
 
-.message {
-    z-index: 1;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    max-width: 66%;
-    margin: 100px auto;
-    padding: 10px;
-    font-size: 36px;
-    display: inline-block;
-    text-align: center;
-    background-color: #f6d98b;
-    border: 3px solid #fff;
-    border-radius: 6px;
-}
-
-.messages {
-    width: 60%;
-    height: 50%;
-    font-size: 60px;
-    line-height: 300px;
-    transition: all 2s;
-}
-
 .message::before {
     content: '';
     display: inline-block;
@@ -188,6 +164,31 @@ body {
     height: 100px;
     background-image: url('lion.png');
     background-size: contain;
+}
+
+.message {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 100px auto;
+    padding: 10px;
+    font-size: 36px;
+    display: inline-block;
+    text-align: center;
+    background-color: #f6d98b;
+    border: 3px solid #fff;
+    border-radius: 6px;
+    white-space: normal;
+}
+
+.messages {
+    width: 100%;
+    height: auto;
+    font-size: 60px;
+    line-height: 1.2;
+    transition: all 2s;
 }
 
 .playTree {

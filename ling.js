@@ -69,7 +69,6 @@ function createFlower() {
   }, millisec);
 }
 
-// 创建圣诞老人
 function createSantaClaus() {
   let santaDiv = document.createElement('div')
   santaDiv.className = 'santaClaus'
@@ -257,7 +256,7 @@ function playSongText() {
 
         message.onclick = function (ele) {
           message.className += ' messages'
-          message.innerText = '圣诞快乐，喜欢长安'
+          message.innerText = '圣诞快乐，小小彤。感觉这首歌最能表达我的感情，就是想和你天天过情人节。如果这个世界上没有圣诞老人，那我就是你的圣诞老人。希望你天天开心。作为一个标准的理科男我对感情的表达可能没有那么细腻，但是我想说你就是我最好的圣诞礼物。有你每个圣诞节都不孤单（再也不用听陈奕迅的圣诞结了）'
           let lion = document.querySelector('.lion')
           lion.style.opacity = 1
           lion.className += ' wobble-hor-bottom'
